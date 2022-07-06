@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <style>
+        .dro{text-align: center; color: indianred;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+.cro
+{text-align: center; font-family: 'Courier New', Courier, monospace;font-weight: 600;}  
+.pro{ background-color: cornflowerblue;} 
+ .bro{ background-color: rgb(140, 160, 68);}
+ .gro{ background-color: darkolivegreen;}
+ .vro{ background-color: rgb(140, 160, 68);}
+ </style>
+</head>
+
+<body class="pro">
+    <h1 class="dro"> Average calculator</h1>
+    <form class="cro" onsubmit="calculate(); return false">
+    <div><label for="english">English :</label>
+            <input class="bro" type="number" min=" 1" required name="obtainedmarks" id="mark1"
+                placeholder="enter your obtained marks here">
+        </div> <br>
+        <div><label for=" urdu"> Urdu :</label>
+            <input class="bro" type="number" min=" 1" required name="obtainedmarks" id="mark2"
+                placeholder="enter your obtained marks here">
+        </div> <br>
+        <div><label for="maths">Maths :</label>
+            <input class="bro" type="number" min=" 1" required name="obtainedmarks" id="mark3"
+                placeholder="enter your obtained marks here">
+        </div> <br>
+        <div><label for=" sindhi"> Sindhi :</label>
+            <input class="bro" type="number" min=" 1" required name="obtainedmarks" id="mark4"
+                placeholder="enter your obtained marks here">
+        </div><br>
+        <div><label for="pak.studies"> PakStudies :</label>
+            <input class="bro" type="number" min=" 1" required name="obtainedmarks" id="mark5"
+                placeholder="enter your obtained marks here">
+        </div> <br>
+        <div><label for="islamiyat"> Islamiyat :</label>
+            <input class="bro" type="number" min=" 1" required name="obtainedmarks" id="mark6"
+                placeholder="enter your obtained marks here">
+        </div> <br>
+        <div><label for="geography"> Geoghraphy :</label>
+            <input class="bro" type="number" min=" 1" required name="obtainedmarks" id="mark7"
+                placeholder="enter your obtained marks here">
+        </div><br>
+        <div><label for="history"> History :</label>
+            <input class="bro" type="number" min=" 1" required name="obtainedmarks" id="mark8"
+                placeholder="enter your obtained marks here">
+        </div> <br>
+        <div><label for="drawing"> Drawing :</label>
+            <input class="bro" type="number" min=" 1" required name="obtainedmarks" id="mark9"
+                placeholder="enter your obtained marks here">
+        </div> <br>
+        <div><label for=" statistics"> Statistics :</label>
+            <input class="bro" type="number" min=" 1" required name="obtainedmarks" id="mark10"
+                placeholder="enter your obtained marks here">
+        </div> <br>
+        <div><button class="gro" type="calculate"> calculate</button></div>
+        <div> <br>
+            <label for="total marks"> TOTAL MARKS :</label>
+            <input class="vro" type="number" name="total marks" id="totalmarks">
+        </div> <br>
+        <div><label for=> Average :</label>
+            <input type="number" class="vro" name="average" ; id="average">
+        </div> <br>
+        <button class="gro" type="submit"> calculate</button><br>
+    </form>
+    <h1 id="result"></h1>
+    <script>
+        function calculate() {
+            let English = +document.querySelector("#mark1").value
+            let Sindhi = +document.querySelector("#mark2").value
+            let Urdu = +document.querySelector("#mark3").value
+            let Maths = +document.querySelector("#mark4").value
+            let PakStudies = +document.querySelector("#mark5").value
+            let Islamiyat = +document.querySelector("#mark6").value
+            let Geoghraphy = +document.querySelector("#mark7").value
+            let History = +document.querySelector("#mark8").value
+            let Drawing = +document.querySelector("#mark9").value
+            let Statistics = +document.querySelector("#mark10").value
+            let numberOfSubjects = 10
+
+            let result = English + Sindhi + Urdu + Maths + PakStudies + Islamiyat + Geoghraphy + History + Drawing + Statistics
+            console.log(result)
+            document.querySelector("#totalmarks").value = result
+            let resultline = document.querySelector("#average").value = result / 10
+            console.log(resultline)
+        } 
+    </script>
+
+
+</body>
+
+</html>
